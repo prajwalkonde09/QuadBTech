@@ -27,9 +27,16 @@ const BookingForm = ({ setShowBookingForm, movieDetails }) => {
     setShowBookingForm(false);
   };
 
+  const formatSchedule = (schedule) => {
+    if (!schedule || !schedule.time || !schedule.days) {
+      return 'Schedule not available';
+    }
+    return `${schedule.days.join(', ')} at ${schedule.time}`;
+  };
+
   return (
     <div className="booking-form-container">
-      <h2 className="booking-form-heading">Book Movie Ticket</h2>
+      <h2 className="booking-form-heading">Book Tickets for <span style={{ color: 'red' }}>{movieDetails.name}</span></h2>
       <form className="booking-form" onSubmit={handleSubmit}>
         <div className="booking-form-field">
           <label htmlFor="name">Name:</label>
@@ -70,7 +77,7 @@ const BookingForm = ({ setShowBookingForm, movieDetails }) => {
             type="text"
             id="schedule"
             name="schedule"
-            value={movieDetails.schedule}
+            value={formatSchedule(movieDetails.schedule)}
             readOnly
           />
         </div>

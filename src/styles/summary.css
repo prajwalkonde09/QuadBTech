@@ -1,77 +1,99 @@
 /* summary.css */
 
 .summary-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .summary-container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    justify-content: center; /* Center items horizontally */
-    align-items: flex-start; /* Align items to the start vertically */
-  }
-  
-  .summary-img {
-    max-width: 250px; /* Adjust the image size as needed */
-    height: auto;
-    margin-right: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .summary-content {
-    flex-grow: 1;
-  }
-  
-  .summary-h1 {
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .summary-p {
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.summary-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.summary-img {
+  max-width: 250px; /* Adjust the image size to fit container */
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 20px; /* Add margin bottom for separation */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-content {
+  flex-grow: 1;
+}
+
+.summary-h1 {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.summary-p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.summary-actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; /* Increase the margin between form and buttons */
+}
+
+.summary-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px; /* Add margin bottom for separation */
+  border-radius: 4px;
+  height: 50px;
+}
+
+.summary-button:hover {
+  background-color: #0056b3;
+}
+
+.summary-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  display: block;
+}
+
+.summary-link:hover {
+  color: #0056b3;
+}
+
+.summary-button,
+.summary-link {
+  margin-right: 50px; 
+}
+
+/* Responsive */
+@media only screen and (max-width: 600px) {
   .summary-actions {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .summary-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-    border-radius: 4px;
-    margin-top: -5px;
-    height: 50px;
-  }
-  
-  .summary-button:hover {
-    background-color: #0056b3;
-  }
-  
+
+  .summary-button,
   .summary-link {
-    text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
-    display: block;
+    margin: 10px 0;
   }
-  
-  .summary-link:hover {
-    color: #0056b3;
+
+  .summary-link {
+    margin-top: 5px;
   }
-  
+
+}
